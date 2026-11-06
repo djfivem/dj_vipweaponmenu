@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>No Vacancy Roleplay</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <div id="app" class="hidden" role="dialog" aria-modal="true" aria-labelledby="title">
+        <div class="shell">
+            <header>
+                <div class="banner-art">
+                    <img src="brand/logo.png" alt="No Vacancy Roleplay" />
+                    <div class="brand">
+                        <div>
+                            <p class="kicker">No Vacancy Roleplay</p>
+                            <h1 id="title">Role Armory</h1>
+                        </div>
+                        <button type="button" id="closeBtn" class="danger">Close</button>
+                    </div>
+                </div>
+                <div class="subhead">
+                    <div class="who">
+                        <span id="player"></span>
+                        <span id="roles" class="tag red">Role access</span>
+                    </div>
+                    <input id="search" type="search" placeholder="Search weapons" autocomplete="off" spellcheck="false" aria-label="Search weapons" />
+                </div>
+            </header>
+            <div class="body">
+                <nav id="nav" aria-label="Weapon categories"></nav>
+                <div class="list-wrap">
+                    <div id="scroller" class="scroller">
+                        <div id="rows"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="toast" class="hidden" role="status"></div>
+            <footer>
+                <span><kbd>ESC</kbd> close</span>
+                <span id="count"></span>
+            </footer>
+        </div>
+    </div>
+    <div id="test-status" class="hidden"></div>
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -365,8 +365,10 @@
                 search.value = 'zzzz-none';
                 state.query = 'zzzz-none';
                 applyFilter();
-            } else if (shot === 'melee') {
-                state.active = 'melee';
+            } else if (shot === 'toast') {
+                toast('Weapon added to your inventory.', true);
+            } else if (shot && document.querySelector('[data-cat="' + shot + '"]')) {
+                state.active = shot;
                 renderNav();
                 applyFilter();
             }
